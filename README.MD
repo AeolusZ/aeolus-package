@@ -12,3 +12,5 @@
 #### Aeolus.ArrayTransform.arrayDeduplication(arr) 返回去重后的数组
 #### Aeolus.ArrayTransform.twoSum(arr, target) 返回arr中合为target的两个数的数组下标
 #### Aeolus.ArrayTransform.maxNum(arr) 返回一个整数数组中的最大值
+### 整数转换：
+#### Aeolus.NumberTransfrom.reverseNumber(num) 返回反转后的整数
