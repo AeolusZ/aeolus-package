@@ -45,5 +45,37 @@ class StringTransform {
         }
         return ArrayTransform.maxNum(numArr)
     }
+    /**
+     * 返回一个字符串所有的子串
+     * @param str 需处理的字符串
+     * @author 郑如秀
+     * @returns Array
+     */
+    subString(str) {
+        if (str === '') return []
+        let arr = []
+        for (let i = 0; i < str.length; i++) {
+            for (let j = i; j < str.length; j++){
+                let sub = str.substring(i, j+1)
+                arr.push(sub)
+            }
+        }
+        return ArrayTransform.sortStringArray(arr)
+    }
+    /**
+     * 返回一个字符串所有的前缀
+     * @param str 需处理的字符串
+     * @author 郑如秀
+     * @returns Array
+     */
+    allPrefix(str) {
+        if (str === '') return []
+        let arr = []
+        for (let i = 0; i < str.length; i++) {
+            let sub = str.substring(0, i+1)
+            arr.push(sub)
+        }
+        return ArrayTransform.sortStringArray(arr)
+    }
 }
 export default new StringTransform()
