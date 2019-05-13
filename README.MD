@@ -10,6 +10,7 @@
 #### Aeolus.StringTransform.lengthOfLongestSubstring(str) 返回不含有重复字符的最长子串的长度
 #### Aeolus.StringTransform.subString(str) 返回包含一个字符串所有子串的数组
 #### Aeolus.StringTransform.allPrefix(str) 返回包含一个字符串的所有前缀的数组
+#### Aeolus.StringTransform.isValid(str) 判断字符串中是否包含有效的括号，包含返回true，否则返回false
 ### 数组转换：
 #### Aeolus.ArrayTransform.arrayDeduplication(arr) 返回去重后的数组
 #### Aeolus.ArrayTransform.twoSum(arr, target) 返回arr中合为target的两个数的数组下标

@@ -77,5 +77,24 @@ class StringTransform {
         }
         return ArrayTransform.sortStringArray(arr)
     }
+    /**
+     * 判断字符串中是否包含有效的括号，包含返回true，否则返回false
+     * @param str 需处理的字符串
+     * @author 郑如秀
+     * @returns Boolean
+     */
+    isValid(str) {
+        console.log(str)
+        if (str === "") return true;
+        let arr = str.split('')
+        for (let i = 0 ; i < arr.length; i++) {
+            if ((arr[i] === '(' && arr[i+1] === ')') || (arr[i] === '[' && arr[i+1] === ']') || (arr[i] === '{' && arr[i+1] === '}')) {
+                arr.splice(i, 2)
+                console.log(arr)
+                return this.isValid(arr.join(''))
+            }
+        }
+        return false
+    }
 }
 export default new StringTransform()
