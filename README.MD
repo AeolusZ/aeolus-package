@@ -20,3 +20,4 @@
 #### Aeolus.ArrayTransform.longestCommonPrefix(arr) 返回字符串数组中最长公共前缀
 ### 整数转换：
 #### Aeolus.NumberTransfrom.reverseNumber(num) 返回反转后的整数
+#### Aeolus.NumberTransfrom.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false

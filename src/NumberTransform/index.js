@@ -36,5 +36,24 @@ class NumberTransform {
                 return this.isOverflow(arr.join(''))
         }
     }
+    /**
+     * 判断一个整数是否是回文数，是返回true，否则返回false
+     * @param num 需进行反转变换的整数
+     * @author 郑如秀
+     * @returns Boolean
+     */
+    isPalindrome(num) {
+        if (num === 0) {
+            return true;
+        } else if (num < 0) {
+            return false;
+        } else if (num > 0) {
+            const arr = num.toString().split('')
+            for (let i = 0, j = arr.length - 1 ; i <= j; i++,j--) {
+                if (arr[i] !== arr[j]) return false
+            }
+            return true
+        }
+    }
 }
 export default new NumberTransform()
