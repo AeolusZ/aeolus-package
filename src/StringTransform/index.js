@@ -96,5 +96,56 @@ class StringTransform {
         }
         return false
     }
+    /**
+     * 罗马数字转整数
+     * @param str 需进行变换的罗马数字
+     * @author 郑如秀
+     * @returns Number
+     */
+    romanToInt(str) {
+        const obj = { I: 1, IV: 4, V: 5, IX: 9, X: 10, XL: 40, L: 50, XC: 90, C: 100, CD: 400, D: 500, CM: 900, M: 1000}
+        if (str === '') return 0;
+        let arr = [];
+        for(let i = 0; i < str.length ; i++) {
+            switch(str[i]) {
+                case 'I':
+                    if (str[i+1] === 'V' || str[i+1] === 'X') {
+                        let sub = str[i].concat(str[i+1])
+                        arr.push(sub)
+                        i++;
+                    } else {
+                        arr.push(str[i])
+                    }  
+                    break;
+                case 'X':
+                    if (str[i+1] === 'L' || str[i+1] === 'C') {
+                        let sub = str[i].concat(str[i+1])
+                        arr.push(sub)
+                        i++;
+                    } else {
+                        arr.push(str[i])
+                    }
+                    break;
+                case 'C':
+                    if (str[i+1] === 'D' || str[i+1] === 'M') {
+                        let sub = str[i].concat(str[i+1])
+                        arr.push(sub)
+                        i++;
+                    } else {
+                        arr.push(str[i])
+                    }
+                    break;
+                default:
+                    arr.push(str[i])
+                    break;
+            }
+        }
+        console.log(arr)
+        let num = 0
+        arr.forEach((val) => {
+            num += obj[val]
+        })
+        return num
+    }
 }
 export default new StringTransform()
