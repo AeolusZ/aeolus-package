@@ -46,5 +46,44 @@ class ExpressionTransfrom {
         }
         return arr1;
     }
+    /**
+     * 返回逆波兰式的值
+     * @param arr 需处理的逆波兰表达式
+     * @author 郑如秀
+     * @returns Number
+     */
+    evalRPN(arr) {
+        if (arr.length === 0) return 0;
+        let arr1 = []
+        for (let i = 0; i < arr.length; i++) {
+            switch(arr[i]) {
+                case '+':
+                    let num1 = Number(arr1.pop()) + Number(arr1.pop())
+                    arr1.push(num1)
+                    break;
+                case '-':
+                    let sub1 = Number(arr1.pop())
+                    let sub2 = Number(arr1.pop())
+                    let num2 = sub2 - sub1
+                    arr1.push(num2)
+                    break;
+                case '*':
+                    let num3 = Number(arr1.pop()) * Number(arr1.pop())
+                    arr1.push(num3)
+                    break;
+                case '/':
+                    let divide1 = Number(arr1.pop())
+                    let divide2 = Number(arr1.pop())
+                    let num4 = parseInt( divide2 / divide1 ) 
+                    arr1.push(num4)
+                    break;
+                default:
+                    arr1.push(arr[i])
+                    break;
+            }
+        }
+        return arr1[0]
+
+    }
 }
 export default new ExpressionTransfrom()
