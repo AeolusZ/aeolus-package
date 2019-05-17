@@ -20,5 +20,9 @@
 #### Aeolus.ArrayTransform.longestCommonSubString(arr) 返回字符串数组中最长公共子串
 #### Aeolus.ArrayTransform.longestCommonPrefix(arr) 返回字符串数组中最长公共前缀
 ### 整数转换：
-#### Aeolus.NumberTransfrom.reverseNumber(num) 返回反转后的整数
-#### Aeolus.NumberTransfrom.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false
+#### Aeolus.NumberTransform.reverseNumber(num) 返回反转后的整数
+#### Aeolus.NumberTransform.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false
+### 表达式转换：
+#### Aeolus.ExpressionTransform.toReversePolish(str) 返回表达式的逆波兰式（注：表达式输入时为字符串形式且数字和运算符之间要加空格，eg：ExpressionTransfrom.toReversePolish('20 + 3 * ( 5 - 1 )')）
+
+##### 若您在使用过程中发现问题请发邮件到以下邮箱：18202764523@163.com
