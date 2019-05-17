@@ -16,9 +16,11 @@
 #### Aeolus.ArrayTransform.arrayDeduplication(arr) 返回去重后的数组
 #### Aeolus.ArrayTransform.twoSum(arr, target) 返回arr中合为target的两个数的数组下标
 #### Aeolus.ArrayTransform.maxNum(arr) 返回一个整数数组中的最大值
-#### Aeolus.ArrayTransform.sortStringArray(arr) 返回一个按字符串长度从长到短排序后的字符串数组
+#### Aeolus.ArrayTransform.sortStringArray(arr) 用冒泡排序返回一个按字符串长度从长到短排序后的字符串数组
 #### Aeolus.ArrayTransform.longestCommonSubString(arr) 返回字符串数组中最长公共子串
 #### Aeolus.ArrayTransform.longestCommonPrefix(arr) 返回字符串数组中最长公共前缀
+#### Aeolus.ArrayTransform.quickSort(arr) 用快速排序返回从小到大排序后的整数数组
+#### Aeolus.ArrayTransform.selectMinDiff(arr1, arr2) 返回两个数组中数据相差最小的差值
 ### 整数转换：
 #### Aeolus.NumberTransform.reverseNumber(num) 返回反转后的整数
 #### Aeolus.NumberTransform.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false

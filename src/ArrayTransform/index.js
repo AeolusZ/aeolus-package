@@ -44,7 +44,7 @@ class ArrayTransform {
         return max
     }
     /**
-     * 返回排列后的字符串数组
+     * 冒泡排序思想排列字符串数组
      * @param arr 需处理的数组
      * @author 郑如秀
      * @returns Array
@@ -109,5 +109,45 @@ class ArrayTransform {
         }
         return ""
     }
+    /**
+     * 快速排序思想排列整数数组
+     * @param arr 需处理的数组
+     * @author 郑如秀
+     * @returns Array
+     */
+    quickSort(arr) {
+    　　if (arr.length <= 1) { return arr; }
+    　　var index = Math.floor(arr.length / 2);
+    　　var pivot = arr.splice(index, 1)[0];
+    　　var left = [];
+    　　var right = [];
+    　　for (var i = 0; i < arr.length; i++){
+    　　　　if (arr[i] < pivot) {
+    　　　　　　left.push(arr[i]);
+    　　　　} else {
+    　　　　　　right.push(arr[i]);
+    　　　　}
+    　　}
+    　　return this.quickSort(left).concat([pivot], this.quickSort(right));
+    };
+    /**
+     * 找出两个数组中数据最小的差值
+     * @param arr1,arr2 需处理的数组
+     * @author 郑如秀
+     * @returns Number
+     */
+    selectMinDiff(arr1, arr2) {
+        if (arr1.length === 0 || arr2.length === 0) return '输入数组不能为空'
+        // 两数组相等则直接返回0
+        if (this.quickSort(arr1).toString() === this.quickSort(arr2).toString()) return 0;
+        let arr = []
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                arr.push(Math.abs(arr1[i] - arr2[j]))
+            }
+        }
+        return this.quickSort(arr)[0]
+    }
+
 }
 export default new ArrayTransform()

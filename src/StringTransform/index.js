@@ -140,7 +140,6 @@ class StringTransform {
                     break;
             }
         }
-        console.log(arr)
         let num = 0
         arr.forEach((val) => {
             num += obj[val]
