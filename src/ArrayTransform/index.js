@@ -148,6 +148,27 @@ class ArrayTransform {
         }
         return this.quickSort(arr)[0]
     }
+    /**
+     * 删除排序数组中的重复项
+     * @param arr 需处理的数组
+     * @author 郑如秀
+     * @returns Number
+     */
+    removeDuplicates(arr) {
+        if (arr.length === []) return 0;
+        let obj = {}
+        for (let i = 0; i < arr.length; i++) {
+            if (obj[arr[i]] === undefined) {
+                obj[arr[i]] = 1
+            } else {
+                arr.splice(i, 1)
+                i--
+            }
+        }
+        console.log(arr)
+        console.log(obj)
+        return arr.length
+    }
 
 }
 export default new ArrayTransform()
