@@ -165,8 +165,6 @@ class ArrayTransform {
                 i--
             }
         }
-        console.log(arr)
-        console.log(obj)
         return arr.length
     }
 

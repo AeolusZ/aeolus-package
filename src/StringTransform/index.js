@@ -146,5 +146,42 @@ class StringTransform {
         })
         return num
     }
+    /**
+     * 实现一个strStr函数，给定一个 haystack 字符串和一个 needle 字符串
+     * 在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)
+     * 如果不存在，则返回  -1
+     * @param haystack，needle 输入的字符串
+     * @author 郑如秀
+     * @returns Number
+     */
+    strStr(haystack, needle) {
+        if (needle === '') return 0;
+        let needleIndex = 0, index = 0, subLen=0; 
+        for (let i = 0; i < haystack.length; i++) {
+            console.log(i)
+                // 开始匹配
+            if (haystack[i] === needle[needleIndex]) {
+                index = i; //haystack中needle出现的索引
+                needleIndex++;
+                subLen++;
+                // neddle已匹配完
+                if (needleIndex === needle.length) {
+                    index = index - needleIndex + 1;
+                    return index;
+                }
+            // 失败
+            } else {
+                index = 0;
+                needleIndex = 0;
+                // 如果前面匹配了一部分    
+                if (subLen !== 0) {
+                    console.log(i, subLen)
+                    i = i - subLen , 
+                    subLen = 0
+                }
+            }
+        }
+        return -1;
+    }
 }
 export default new StringTransform()
