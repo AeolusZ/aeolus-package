@@ -167,6 +167,23 @@ class ArrayTransform {
         }
         return arr.length
     }
-
+     /**
+     * 删除数组中指定元素并返回删除后数组长度
+     * @param arr 需处理的数组
+     * @param val 要被删除的元素
+     * @author 郑如秀
+     * @returns Number
+     */
+    removeElement(arr, val) {
+        if(arr.length === 0) return 0;
+        if(val === '') return arr.length;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === val) {
+                arr.splice(i , 1)
+                i--;
+            }
+        }
+        return arr.length
+    }
 }
 export default new ArrayTransform()

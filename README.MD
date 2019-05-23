@@ -23,6 +23,7 @@
 #### Aeolus.ArrayTransform.quickSort(arr) 用快速排序返回从小到大排序后的整数数组
 #### Aeolus.ArrayTransform.selectMinDiff(arr1, arr2) 返回两个数组中数据相差最小的差值
 #### Aeolus.ArrayTransform.removeDuplicates(arr) 删除排序数组中重复元素，并返回删除后的数组长度，原数组变成无重复值的新数组
+#### Aeolus.ArrayTransform.removeElement(arr, val) 删除数组中值为val的元素，并返回删除后的数组长度
 ### 整数转换：
 #### Aeolus.NumberTransform.reverseNumber(num) 返回反转后的整数
 #### Aeolus.NumberTransform.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false
