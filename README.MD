@@ -30,5 +30,7 @@
 ### 表达式转换：
 #### Aeolus.ExpressionTransform.toReversePolish(str) 返回表达式的逆波兰式（注：表达式输入时为字符串形式且数字和运算符之间要加空格，eg：ExpressionTransfrom.toReversePolish('20 + 3 * ( 5 - 1 )')）
 #### Aeolus.ExpressionTransform.evalRPN(arr) 返回逆波兰表达式的值
+### 其他：
+#### Aeolus.Other.countAndSay(n) 返回一个报数数列的第n项（n从1开始，报数数列leetcode38题有描述）
 
 ##### 若您在使用过程中发现问题请发邮件到以下邮箱：18202764523@163.com
