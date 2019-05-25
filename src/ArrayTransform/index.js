@@ -185,5 +185,53 @@ class ArrayTransform {
         }
         return arr.length
     }
+    /**
+     * 二分插入
+     * @param arr 需处理的数组
+     * @param low 低位
+     * @param high 高位
+     * @param target 目标值
+     * @author 郑如秀
+     * @returns Number
+     */
+    binaryInsert(arr, low, high, target){
+        console.log(arr, low, high, target)
+        const midIndex = parseInt((high + low ) / 2);
+        const midNum = arr[midIndex]
+        if (low < high) {
+            if (target > midNum) {
+                low = midIndex + 1;
+                return this.binaryInsert(arr, low, high, target)
+            } else if (target < midNum) {
+                high = midIndex - 1
+                return this.binaryInsert(arr, low, high, target)
+            } else if (target === midNum) {
+                arr.splice(midIndex + 1, 0 ,target)
+            }
+        } 
+        if (target > arr[low]) {
+            arr.splice(low + 1, 0 ,target)
+        } else if (target < arr[low]){
+            arr.splice(low, 0 ,target)
+        }
+        return arr
+    }
+    /**
+     * 搜索插入位置
+     * @param arr 需处理的数组
+     * @param target 目标值
+     * @author 郑如秀
+     * @returns Number
+     */
+    searchInsert(arr, target) {
+        if (arr.indexOf(target) !== -1) {
+            return arr.indexOf(target)
+        } else {
+            // 数组中没有目标元素，要插入
+            const newArr = this.binaryInsert(arr, 0, arr.length -1,target)
+            console.log(newArr)
+            return newArr.indexOf(target)
+        }
+    }
 }
 export default new ArrayTransform()

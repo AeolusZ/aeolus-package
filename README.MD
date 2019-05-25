@@ -24,6 +24,8 @@
 #### Aeolus.ArrayTransform.selectMinDiff(arr1, arr2) 返回两个数组中数据相差最小的差值
 #### Aeolus.ArrayTransform.removeDuplicates(arr) 删除排序数组中重复元素，并返回删除后的数组长度，原数组变成无重复值的新数组
 #### Aeolus.ArrayTransform.removeElement(arr, val) 删除数组中值为val的元素，并返回删除后的数组长度
+#### Aeolus.ArrayTransform.binaryInsert(arr, low, high, target) 利用二分法向有序数组中插入一个元素，并保证其插入后也有效
+#### Aeolus.ArrayTransform.searchInsert(arr, target) 搜索有序数组中目标元素的位置，若找不到则将其按排列顺序插入后再返回其索引
 ### 整数转换：
 #### Aeolus.NumberTransform.reverseNumber(num) 返回反转后的整数
 #### Aeolus.NumberTransform.isPalindrome(num) 判断整数是否是回文数，是返回true，否则返回false
