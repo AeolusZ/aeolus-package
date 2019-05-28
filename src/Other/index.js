@@ -34,5 +34,40 @@ class Other {
         }
         
     }
+    ListNode(val) {
+        this.val = val;
+        this.next = null;
+     }
+    /**
+     * 合并两个有序链表
+     * @param l1 有序链表1
+     * @param l2 有序链表2
+     * @author 郑如秀
+     * @returns ListNode 
+     */
+    mergeTwoList(l1, l2) {
+        if(l1 === null) return l2;
+        if(l2 === null) return l1;
+        let cur1 = l1, cur2 = l2, l3 = new ListNode()
+        while(!(cur1===null && cur2===null)) {
+            if (cur1.val >= cur2.val) {
+                l3 = this.pushNode(l3, new ListNode(cur2.val))
+                cur2 = cur2.next
+            } else { 
+                l3 = this.pushNode(l3, new ListNode(cur1.val))
+                cur1 = cur1.next
+            }
+        }
+        return l3.next
+    }
+    pushNode(list, item) {
+        let cur = list
+        while(cur.next !== null) {
+            cur = cur.next
+        }
+        cur.next = item
+        
+        return list
+    }
 }
 export default new Other()

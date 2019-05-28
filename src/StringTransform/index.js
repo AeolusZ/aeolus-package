@@ -183,5 +183,34 @@ class StringTransform {
         }
         return -1;
     }
+    /**
+     * 找出一个字符串中最长的回文子
+     * @param str 输入的字符串
+     * @author 郑如秀
+     * @returns String
+     */
+    longestPalindrome(str) {
+        if (str === '') return ''
+        let t = '$#'
+        for (let i = 0 ; i < str.length; i++) {
+            t += str[i];
+            t += '#'
+        }
+        let mx = 0, id = 0, resLen = 0, resCenter = 0
+        let p =[]
+        for (let i = 0; i < t.length; i++) {
+            p[i] = mx > i ? Math.min(p[2*id - i], mx-i) : 1
+            while (t[i + p[i]] === t[i - p[i]]) p[i]++
+            if (mx < i + p[i]) {
+                mx = i + p[i];
+                id = i
+            }
+            if (resLen < p[i]) {
+                resLen = p[i];
+                resCenter = i;
+            }
+        }
+        return str.substr((resCenter - resLen) / 2, resLen - 1)
+    }
 }
 export default new StringTransform()

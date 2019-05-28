@@ -13,6 +13,7 @@
 #### Aeolus.StringTransform.isValid(str) 判断字符串中是否包含有效的括号，包含返回true，否则返回false
 #### Aeolus.StringTransform.romanToInt(str) 将罗马数字转为整数
 #### Aeolus.StringTransform.strStr(str1, str2) 模拟java中的strStr函数，返回str2在str1出现的第一个位置
+#### Aeolus.StringTransform.longestPalindrome(str) 利用马拉车算法找出字符串中的最长回文子串
 ### 数组转换：
 #### Aeolus.ArrayTransform.arrayDeduplication(arr) 返回去重后的数组
 #### Aeolus.ArrayTransform.twoSum(arr, target) 返回arr中合为target的两个数的数组下标
